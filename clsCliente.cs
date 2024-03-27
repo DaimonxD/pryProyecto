@@ -52,3 +52,9 @@ namespace pryProyecto
 
     }
 }
+
+
+
+
+//Tarea
+//Proyecto (Boton Salir cierra) (Boton Datos del Desarrollador muestra foto, dni, nombre, semestre
