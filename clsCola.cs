@@ -22,5 +22,19 @@ namespace pryProyecto
             get { return ult; }
             set { ult = value; }
         }
+
+        public void Agregar(clsNodo Nuevo)
+        {
+            if(Primero == null)
+            {
+                Primero = Nuevo;
+            }
+            else
+            {
+                Ultimo.Siguiente = Nuevo;
+            }
+
+            Ultimo = Nuevo;
+        }
     }
 }
