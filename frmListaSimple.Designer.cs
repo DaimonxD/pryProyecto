@@ -35,13 +35,8 @@ namespace pryProyecto
             this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblT = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblC = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtN = new System.Windows.Forms.TextBox();
@@ -50,13 +45,14 @@ namespace pryProyecto
             this.txtT = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lstCola
@@ -102,13 +98,9 @@ namespace pryProyecto
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lblT);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.lblN);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.lblC);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(515, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(281, 218);
@@ -116,65 +108,23 @@ namespace pryProyecto
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Elemento Eliminado";
             // 
-            // lblT
-            // 
-            this.lblT.Location = new System.Drawing.Point(113, 139);
-            this.lblT.Name = "lblT";
-            this.lblT.ReadOnly = true;
-            this.lblT.Size = new System.Drawing.Size(161, 20);
-            this.lblT.TabIndex = 13;
-            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(162, 175);
+            this.btnEliminar.Location = new System.Drawing.Point(6, 175);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(112, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(268, 37);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // lblN
-            // 
-            this.lblN.Location = new System.Drawing.Point(113, 87);
-            this.lblN.Name = "lblN";
-            this.lblN.ReadOnly = true;
-            this.lblN.Size = new System.Drawing.Size(161, 20);
-            this.lblN.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 36);
+            this.label6.Location = new System.Drawing.Point(6, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Código";
-            // 
-            // lblC
-            // 
-            this.lblC.Location = new System.Drawing.Point(113, 33);
-            this.lblC.Name = "lblC";
-            this.lblC.ReadOnly = true;
-            this.lblC.Size = new System.Drawing.Size(161, 20);
-            this.lblC.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Nombre";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Trámite";
             // 
             // label2
             // 
@@ -210,9 +160,9 @@ namespace pryProyecto
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(163, 175);
+            this.btnAgregar.Location = new System.Drawing.Point(6, 175);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(112, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(269, 37);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "&Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -249,15 +199,6 @@ namespace pryProyecto
             this.label3.TabIndex = 2;
             this.label3.Text = "Trámite";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 218);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvCola);
@@ -268,6 +209,24 @@ namespace pryProyecto
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listado en una Lista y una Grilla";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 218);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(52, 134);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(221, 21);
+            this.comboBox1.TabIndex = 11;
             // 
             // frmListaSimple
             // 
@@ -285,8 +244,8 @@ namespace pryProyecto
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,13 +259,8 @@ namespace pryProyecto
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox lblT;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox lblN;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox lblC;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtN;
@@ -317,5 +271,6 @@ namespace pryProyecto
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
