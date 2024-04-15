@@ -11,6 +11,7 @@ namespace pryProyecto
         private Int32 cod;
         private String nom;
         private String tra;
+        private clsNodo ant;
         private clsNodo sig;
 
 
@@ -30,6 +31,12 @@ namespace pryProyecto
         {
             get { return tra; }
             set { tra = value; }
+        }
+
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
 
         public clsNodo Siguiente

@@ -126,21 +126,21 @@ namespace pryProyecto
             // 
             this.txtN.Location = new System.Drawing.Point(114, 87);
             this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(161, 20);
+            this.txtN.Size = new System.Drawing.Size(142, 20);
             this.txtN.TabIndex = 5;
             // 
             // txtC
             // 
             this.txtC.Location = new System.Drawing.Point(114, 33);
             this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(161, 20);
+            this.txtC.Size = new System.Drawing.Size(142, 20);
             this.txtC.TabIndex = 4;
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(6, 175);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(269, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(244, 37);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "&Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@ namespace pryProyecto
             // 
             this.txtT.Location = new System.Drawing.Point(114, 139);
             this.txtT.Name = "txtT";
-            this.txtT.Size = new System.Drawing.Size(161, 20);
+            this.txtT.Size = new System.Drawing.Size(142, 20);
             this.txtT.TabIndex = 6;
             // 
             // groupBox1
@@ -162,9 +162,9 @@ namespace pryProyecto
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(228, 2);
+            this.groupBox1.Location = new System.Drawing.Point(253, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(281, 218);
+            this.groupBox1.Size = new System.Drawing.Size(256, 218);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Elemento";
@@ -228,7 +228,7 @@ namespace pryProyecto
             this.pictureBox1.Location = new System.Drawing.Point(4, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 207);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -251,7 +251,6 @@ namespace pryProyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
