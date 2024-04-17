@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtT = new System.Windows.Forms.TextBox();
             this.txtN = new System.Windows.Forms.TextBox();
@@ -42,51 +38,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lstLista = new System.Windows.Forms.ListBox();
-            this.cboxLista = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            this.dgvListaDoble = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lstListaDoble = new System.Windows.Forms.ListBox();
+            this.cboxListaDoble = new System.Windows.Forms.ComboBox();
+            this.rAs = new System.Windows.Forms.RadioButton();
+            this.rDes = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // dgvLista
-            // 
-            this.dgvLista.AllowUserToAddRows = false;
-            this.dgvLista.AllowUserToDeleteRows = false;
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Nombre,
-            this.Tramite});
-            this.dgvLista.Location = new System.Drawing.Point(308, 20);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.ReadOnly = true;
-            this.dgvLista.Size = new System.Drawing.Size(478, 199);
-            this.dgvLista.TabIndex = 1;
-            // 
-            // Tramite
-            // 
-            this.Tramite.HeaderText = "Trámite";
-            this.Tramite.Name = "Tramite";
-            this.Tramite.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -164,8 +133,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dgvLista);
-            this.groupBox3.Controls.Add(this.lstLista);
+            this.groupBox3.Controls.Add(this.lstListaDoble);
+            this.groupBox3.Controls.Add(this.dgvListaDoble);
             this.groupBox3.Location = new System.Drawing.Point(4, 227);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(792, 221);
@@ -173,27 +142,9 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listado en una Lista y una Grilla";
             // 
-            // lstLista
-            // 
-            this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(7, 20);
-            this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(294, 199);
-            this.lstLista.TabIndex = 0;
-            // 
-            // cboxLista
-            // 
-            this.cboxLista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxLista.FormattingEnabled = true;
-            this.cboxLista.Location = new System.Drawing.Point(52, 134);
-            this.cboxLista.Name = "cboxLista";
-            this.cboxLista.Size = new System.Drawing.Size(221, 21);
-            this.cboxLista.TabIndex = 11;
-            this.cboxLista.SelectedIndexChanged += new System.EventHandler(this.cboxLista_SelectedIndexChanged);
-            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(6, 175);
+            this.btnEliminar.Location = new System.Drawing.Point(9, 66);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(268, 37);
             this.btnEliminar.TabIndex = 10;
@@ -204,7 +155,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 137);
+            this.label6.Location = new System.Drawing.Point(6, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 7;
@@ -212,7 +163,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cboxLista);
+            this.groupBox2.Controls.Add(this.rDes);
+            this.groupBox2.Controls.Add(this.rAs);
+            this.groupBox2.Controls.Add(this.cboxListaDoble);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(515, 2);
@@ -232,6 +185,77 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvListaDoble
+            // 
+            this.dgvListaDoble.AllowUserToAddRows = false;
+            this.dgvListaDoble.AllowUserToDeleteRows = false;
+            this.dgvListaDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaDoble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Nombre,
+            this.Tramite});
+            this.dgvListaDoble.Location = new System.Drawing.Point(308, 20);
+            this.dgvListaDoble.Name = "dgvListaDoble";
+            this.dgvListaDoble.ReadOnly = true;
+            this.dgvListaDoble.Size = new System.Drawing.Size(478, 201);
+            this.dgvListaDoble.TabIndex = 1;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Tramite
+            // 
+            this.Tramite.HeaderText = "Tramite";
+            this.Tramite.Name = "Tramite";
+            this.Tramite.ReadOnly = true;
+            // 
+            // lstListaDoble
+            // 
+            this.lstListaDoble.FormattingEnabled = true;
+            this.lstListaDoble.Location = new System.Drawing.Point(9, 20);
+            this.lstListaDoble.Name = "lstListaDoble";
+            this.lstListaDoble.Size = new System.Drawing.Size(293, 199);
+            this.lstListaDoble.TabIndex = 2;            // 
+            // cboxListaDoble
+            // 
+            this.cboxListaDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxListaDoble.FormattingEnabled = true;
+            this.cboxListaDoble.Location = new System.Drawing.Point(85, 19);
+            this.cboxListaDoble.Name = "cboxListaDoble";
+            this.cboxListaDoble.Size = new System.Drawing.Size(196, 21);
+            this.cboxListaDoble.TabIndex = 11;
+            // 
+            // rAs
+            // 
+            this.rAs.AutoSize = true;
+            this.rAs.Location = new System.Drawing.Point(9, 137);
+            this.rAs.Name = "rAs";
+            this.rAs.Size = new System.Drawing.Size(82, 17);
+            this.rAs.TabIndex = 12;
+            this.rAs.TabStop = true;
+            this.rAs.Text = "Ascendente";
+            this.rAs.UseVisualStyleBackColor = true;
+            // 
+            // rDes
+            // 
+            this.rDes.AutoSize = true;
+            this.rDes.Location = new System.Drawing.Point(9, 160);
+            this.rDes.Name = "rDes";
+            this.rDes.Size = new System.Drawing.Size(89, 17);
+            this.rDes.TabIndex = 13;
+            this.rDes.TabStop = true;
+            this.rDes.Text = "Descendente";
+            this.rDes.UseVisualStyleBackColor = true;
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,13 +267,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmListaDoble";
             this.Text = "frmListaDoble";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,10 +281,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridView dgvLista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtT;
         private System.Windows.Forms.TextBox txtN;
@@ -270,10 +290,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox lstLista;
-        private System.Windows.Forms.ComboBox cboxLista;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvListaDoble;
+        private System.Windows.Forms.ListBox lstListaDoble;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
+        private System.Windows.Forms.ComboBox cboxListaDoble;
+        private System.Windows.Forms.RadioButton rDes;
+        private System.Windows.Forms.RadioButton rAs;
     }
 }

@@ -21,7 +21,6 @@ namespace pryProyecto
         clsListaSimple lst = new clsListaSimple();
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
             if(lst.Primero != null)
             {
                 Int32 x = Convert.ToInt32(cboxLista.Text);
@@ -40,7 +39,7 @@ namespace pryProyecto
 
         private void cboxLista_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboxLista .Text == "")
+            if(cboxLista.Text == "")
             {
                 btnEliminar.Enabled = false;
             }
