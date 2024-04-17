@@ -13,7 +13,22 @@ namespace pryProyecto
         private String tra;
         private clsNodo ant;
         private clsNodo sig;
+        private clsNodo izq;
+        private clsNodo der;
 
+
+        public clsNodo Izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+
+        }
+
+        public clsNodo Derecho
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
 
         public Int32 Codigo
         {
