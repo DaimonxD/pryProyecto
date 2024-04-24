@@ -57,7 +57,7 @@ namespace pryProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if(rAs.Checked == true)
+            if(rAs.Checked)
             {
                 if (lst.Primero != null)
                 {
@@ -74,7 +74,7 @@ namespace pryProyecto
                 }
                 btnEliminar.Enabled = false;
             }
-            if(rDes.Checked == true)
+            if(rDes.Checked)
             {
                 if (lst.Primero != null)
                 {
