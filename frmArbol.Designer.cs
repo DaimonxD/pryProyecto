@@ -187,6 +187,7 @@
             this.btnEquilibrar.TabIndex = 3;
             this.btnEquilibrar.Text = "&Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // groupBox3
             // 

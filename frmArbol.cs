@@ -36,20 +36,18 @@ namespace pryProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //if (lst.Primero != null)
-            //{
-            //    Int32 x = Convert.ToInt32(cboxLista.Text);
-            //    lst.Eliminar(x);
-            //    lst.Recorrer(lstLista);
-            //    lst.Recorrer(dgvLista);
-            //    lst.Recorrer(cboxLista);
-            //    lst.Recorrer();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("La lista está vacía");
-            //}
-            //btnEliminar.Enabled = false;
+            if (arbol.Raiz != null)
+            {
+                Int32 x = Convert.ToInt32(cboxT.Text);
+                arbol.Eliminar(x);
+                arbol.Recorrer(dgvTree);
+                arbol.Recorrer(cboxT);
+            }
+            else
+            {
+                MessageBox.Show("La lista está vacía");
+            }
+            btnEliminar.Enabled = false;
         }
 
         private void cboxT_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,6 +60,11 @@ namespace pryProyecto
             {
                 btnEliminar.Enabled = true;
             }
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
