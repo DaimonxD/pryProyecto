@@ -30,24 +30,24 @@
         {
             this.tView = new System.Windows.Forms.TreeView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtT = new System.Windows.Forms.TextBox();
+            this.txtN = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboxT = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEquilibrar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvTree = new System.Windows.Forms.DataGridView();
-            this.inOrden = new System.Windows.Forms.RadioButton();
-            this.preOrden = new System.Windows.Forms.RadioButton();
             this.postOrden = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtC = new System.Windows.Forms.TextBox();
-            this.txtN = new System.Windows.Forms.TextBox();
-            this.txtT = new System.Windows.Forms.TextBox();
-            this.cboxT = new System.Windows.Forms.ComboBox();
+            this.preOrden = new System.Windows.Forms.RadioButton();
+            this.inOrden = new System.Windows.Forms.RadioButton();
+            this.dgvTree = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +80,64 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // txtT
+            // 
+            this.txtT.Location = new System.Drawing.Point(88, 115);
+            this.txtT.Name = "txtT";
+            this.txtT.Size = new System.Drawing.Size(184, 20);
+            this.txtT.TabIndex = 11;
+            // 
+            // txtN
+            // 
+            this.txtN.Location = new System.Drawing.Point(88, 67);
+            this.txtN.Name = "txtN";
+            this.txtN.Size = new System.Drawing.Size(184, 20);
+            this.txtN.TabIndex = 10;
+            // 
+            // txtC
+            // 
+            this.txtC.Location = new System.Drawing.Point(88, 20);
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(184, 20);
+            this.txtC.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Trámite";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Código";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(6, 157);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(266, 37);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "&Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cboxT);
@@ -92,14 +150,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // btnEquilibrar
+            // cboxT
             // 
-            this.btnEquilibrar.Location = new System.Drawing.Point(516, 170);
-            this.btnEquilibrar.Name = "btnEquilibrar";
-            this.btnEquilibrar.Size = new System.Drawing.Size(278, 37);
-            this.btnEquilibrar.TabIndex = 3;
-            this.btnEquilibrar.Text = "&Equilibrar";
-            this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.cboxT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxT.FormattingEnabled = true;
+            this.cboxT.Location = new System.Drawing.Point(109, 33);
+            this.cboxT.Name = "cboxT";
+            this.cboxT.Size = new System.Drawing.Size(151, 21);
+            this.cboxT.TabIndex = 10;
+            this.cboxT.SelectedIndexChanged += new System.EventHandler(this.cboxT_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Código";
             // 
             // btnEliminar
             // 
@@ -109,16 +177,16 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnAgregar
+            // btnEquilibrar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(6, 157);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(266, 37);
-            this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.Text = "&Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnEquilibrar.Location = new System.Drawing.Point(516, 170);
+            this.btnEquilibrar.Name = "btnEquilibrar";
+            this.btnEquilibrar.Size = new System.Drawing.Size(278, 37);
+            this.btnEquilibrar.TabIndex = 3;
+            this.btnEquilibrar.Text = "&Equilibrar";
+            this.btnEquilibrar.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -132,6 +200,39 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
+            // 
+            // postOrden
+            // 
+            this.postOrden.AutoSize = true;
+            this.postOrden.Location = new System.Drawing.Point(7, 117);
+            this.postOrden.Name = "postOrden";
+            this.postOrden.Size = new System.Drawing.Size(78, 17);
+            this.postOrden.TabIndex = 3;
+            this.postOrden.TabStop = true;
+            this.postOrden.Text = "Post-Orden";
+            this.postOrden.UseVisualStyleBackColor = true;
+            // 
+            // preOrden
+            // 
+            this.preOrden.AutoSize = true;
+            this.preOrden.Location = new System.Drawing.Point(7, 79);
+            this.preOrden.Name = "preOrden";
+            this.preOrden.Size = new System.Drawing.Size(73, 17);
+            this.preOrden.TabIndex = 2;
+            this.preOrden.TabStop = true;
+            this.preOrden.Text = "Pre-Orden";
+            this.preOrden.UseVisualStyleBackColor = true;
+            // 
+            // inOrden
+            // 
+            this.inOrden.AutoSize = true;
+            this.inOrden.Location = new System.Drawing.Point(7, 38);
+            this.inOrden.Name = "inOrden";
+            this.inOrden.Size = new System.Drawing.Size(66, 17);
+            this.inOrden.TabIndex = 1;
+            this.inOrden.TabStop = true;
+            this.inOrden.Text = "In-Orden";
+            this.inOrden.UseVisualStyleBackColor = true;
             // 
             // dgvTree
             // 
@@ -147,105 +248,6 @@
             this.dgvTree.ReadOnly = true;
             this.dgvTree.Size = new System.Drawing.Size(556, 211);
             this.dgvTree.TabIndex = 0;
-            // 
-            // inOrden
-            // 
-            this.inOrden.AutoSize = true;
-            this.inOrden.Location = new System.Drawing.Point(7, 38);
-            this.inOrden.Name = "inOrden";
-            this.inOrden.Size = new System.Drawing.Size(66, 17);
-            this.inOrden.TabIndex = 1;
-            this.inOrden.TabStop = true;
-            this.inOrden.Text = "In-Orden";
-            this.inOrden.UseVisualStyleBackColor = true;
-            // 
-            // preOrden
-            // 
-            this.preOrden.AutoSize = true;
-            this.preOrden.Location = new System.Drawing.Point(7, 79);
-            this.preOrden.Name = "preOrden";
-            this.preOrden.Size = new System.Drawing.Size(73, 17);
-            this.preOrden.TabIndex = 2;
-            this.preOrden.TabStop = true;
-            this.preOrden.Text = "Pre-Orden";
-            this.preOrden.UseVisualStyleBackColor = true;
-            // 
-            // postOrden
-            // 
-            this.postOrden.AutoSize = true;
-            this.postOrden.Location = new System.Drawing.Point(7, 117);
-            this.postOrden.Name = "postOrden";
-            this.postOrden.Size = new System.Drawing.Size(78, 17);
-            this.postOrden.TabIndex = 3;
-            this.postOrden.TabStop = true;
-            this.postOrden.Text = "Post-Orden";
-            this.postOrden.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Código";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Trámite";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Código";
-            // 
-            // txtC
-            // 
-            this.txtC.Location = new System.Drawing.Point(88, 20);
-            this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(184, 20);
-            this.txtC.TabIndex = 9;
-            // 
-            // txtN
-            // 
-            this.txtN.Location = new System.Drawing.Point(88, 67);
-            this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(184, 20);
-            this.txtN.TabIndex = 10;
-            // 
-            // txtT
-            // 
-            this.txtT.Location = new System.Drawing.Point(88, 115);
-            this.txtT.Name = "txtT";
-            this.txtT.Size = new System.Drawing.Size(184, 20);
-            this.txtT.TabIndex = 11;
-            // 
-            // cboxT
-            // 
-            this.cboxT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxT.FormattingEnabled = true;
-            this.cboxT.Location = new System.Drawing.Point(109, 33);
-            this.cboxT.Name = "cboxT";
-            this.cboxT.Size = new System.Drawing.Size(151, 21);
-            this.cboxT.TabIndex = 10;
             // 
             // Codigo
             // 

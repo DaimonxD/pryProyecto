@@ -38,23 +38,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstListaDoble = new System.Windows.Forms.ListBox();
-            this.cboxListaDoble = new System.Windows.Forms.ComboBox();
-            this.rAs = new System.Windows.Forms.RadioButton();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rDes = new System.Windows.Forms.RadioButton();
+            this.rAs = new System.Windows.Forms.RadioButton();
+            this.cboxListaDoble = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -142,48 +142,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listado en una Lista y una Grilla";
             // 
-            // btnEliminar
+            // lstListaDoble
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(9, 66);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(268, 37);
-            this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "&Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Código";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rDes);
-            this.groupBox2.Controls.Add(this.rAs);
-            this.groupBox2.Controls.Add(this.cboxListaDoble);
-            this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(515, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(281, 218);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Elemento Eliminado";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.lstListaDoble.FormattingEnabled = true;
+            this.lstListaDoble.Location = new System.Drawing.Point(9, 20);
+            this.lstListaDoble.Name = "lstListaDoble";
+            this.lstListaDoble.Size = new System.Drawing.Size(293, 199);
+            this.lstListaDoble.TabIndex = 2;
             // 
             // dgvListaDoble
             // 
@@ -218,21 +183,49 @@
             this.Tramite.Name = "Tramite";
             this.Tramite.ReadOnly = true;
             // 
-            // lstListaDoble
+            // btnEliminar
             // 
-            this.lstListaDoble.FormattingEnabled = true;
-            this.lstListaDoble.Location = new System.Drawing.Point(9, 20);
-            this.lstListaDoble.Name = "lstListaDoble";
-            this.lstListaDoble.Size = new System.Drawing.Size(293, 199);
-            this.lstListaDoble.TabIndex = 2;            // 
-            // cboxListaDoble
+            this.btnEliminar.Location = new System.Drawing.Point(9, 66);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(268, 37);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            this.cboxListaDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxListaDoble.FormattingEnabled = true;
-            this.cboxListaDoble.Location = new System.Drawing.Point(85, 19);
-            this.cboxListaDoble.Name = "cboxListaDoble";
-            this.cboxListaDoble.Size = new System.Drawing.Size(196, 21);
-            this.cboxListaDoble.TabIndex = 11;
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Código";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rDes);
+            this.groupBox2.Controls.Add(this.rAs);
+            this.groupBox2.Controls.Add(this.cboxListaDoble);
+            this.groupBox2.Controls.Add(this.btnEliminar);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(515, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(281, 218);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Elemento Eliminado";
+            // 
+            // rDes
+            // 
+            this.rDes.AutoSize = true;
+            this.rDes.Location = new System.Drawing.Point(9, 160);
+            this.rDes.Name = "rDes";
+            this.rDes.Size = new System.Drawing.Size(89, 17);
+            this.rDes.TabIndex = 13;
+            this.rDes.TabStop = true;
+            this.rDes.Text = "Descendente";
+            this.rDes.UseVisualStyleBackColor = true;
             // 
             // rAs
             // 
@@ -245,16 +238,25 @@
             this.rAs.Text = "Ascendente";
             this.rAs.UseVisualStyleBackColor = true;
             // 
-            // rDes
+            // cboxListaDoble
             // 
-            this.rDes.AutoSize = true;
-            this.rDes.Location = new System.Drawing.Point(9, 160);
-            this.rDes.Name = "rDes";
-            this.rDes.Size = new System.Drawing.Size(89, 17);
-            this.rDes.TabIndex = 13;
-            this.rDes.TabStop = true;
-            this.rDes.Text = "Descendente";
-            this.rDes.UseVisualStyleBackColor = true;
+            this.cboxListaDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxListaDoble.FormattingEnabled = true;
+            this.cboxListaDoble.Location = new System.Drawing.Point(85, 19);
+            this.cboxListaDoble.Name = "cboxListaDoble";
+            this.cboxListaDoble.Size = new System.Drawing.Size(196, 21);
+            this.cboxListaDoble.TabIndex = 11;
+            this.cboxListaDoble.SelectedIndexChanged += new System.EventHandler(this.cboxListaDoble_SelectedIndexChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // frmListaDoble
             // 
@@ -270,10 +272,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.ResumeLayout(false);
 
         }

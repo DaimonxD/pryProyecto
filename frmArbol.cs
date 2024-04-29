@@ -33,5 +33,35 @@ namespace pryProyecto
             txtN.Text = "";
             txtC.Text = "";
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //if (lst.Primero != null)
+            //{
+            //    Int32 x = Convert.ToInt32(cboxLista.Text);
+            //    lst.Eliminar(x);
+            //    lst.Recorrer(lstLista);
+            //    lst.Recorrer(dgvLista);
+            //    lst.Recorrer(cboxLista);
+            //    lst.Recorrer();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("La lista está vacía");
+            //}
+            //btnEliminar.Enabled = false;
+        }
+
+        private void cboxT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboxT.Text == "")
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
+            }
+        }
     }
 }

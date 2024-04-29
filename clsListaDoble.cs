@@ -29,8 +29,8 @@ namespace pryProyecto
         {
             if (Primero == null)
             {
-                Primero = null;
-                Ultimo = null;
+                Primero = Nuevo;
+                Ultimo = Nuevo;
             }
             else
             {
@@ -110,7 +110,7 @@ namespace pryProyecto
         {
             Grilla.Rows.Clear();
             clsNodo aux = Primero;
-            while(aux != null)
+            while (aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Siguiente;
@@ -119,9 +119,9 @@ namespace pryProyecto
 
         public void RecorrerDes(DataGridView Grilla)
         {
-            Grilla.Rows.Clear();
             clsNodo aux = Ultimo;
-            while(aux!= null)
+            Grilla.Rows.Clear();
+            while(aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Anterior;

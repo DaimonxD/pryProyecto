@@ -23,7 +23,7 @@ namespace pryProyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(rAs.Checked == true)
+            if(rAs.Checked)
             {
                 clsNodo obj = new clsNodo();
                 obj.Codigo = Convert.ToInt32(txtC.Text);
@@ -38,7 +38,7 @@ namespace pryProyecto
                 txtN.Text = "";
                 txtC.Text = "";
             }
-            if(rDes.Checked == true)
+            if(rDes.Checked)
             {
                 clsNodo obj = new clsNodo();
                 obj.Codigo = Convert.ToInt32(txtC.Text);
@@ -94,7 +94,7 @@ namespace pryProyecto
 
         }
 
-        private void cboxLista_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboxListaDoble_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboxListaDoble.Text == "")
             {
@@ -105,5 +105,6 @@ namespace pryProyecto
                 btnEliminar.Enabled = true;
             }
         }
+
     }
 }
