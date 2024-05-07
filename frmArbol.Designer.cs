@@ -44,6 +44,7 @@
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Descendente = new System.Windows.Forms.RadioButton();
             this.postOrden = new System.Windows.Forms.RadioButton();
             this.preOrden = new System.Windows.Forms.RadioButton();
             this.inOrden = new System.Windows.Forms.RadioButton();
@@ -78,7 +79,7 @@
             this.groupBox1.Size = new System.Drawing.Size(278, 202);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Agregar Elemento";
             // 
             // txtT
             // 
@@ -148,7 +149,7 @@
             this.groupBox2.Size = new System.Drawing.Size(278, 128);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Eliminar Elemento";
             // 
             // cboxT
             // 
@@ -191,6 +192,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Descendente);
             this.groupBox3.Controls.Add(this.postOrden);
             this.groupBox3.Controls.Add(this.preOrden);
             this.groupBox3.Controls.Add(this.inOrden);
@@ -200,40 +202,55 @@
             this.groupBox3.Size = new System.Drawing.Size(781, 223);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Orden";
+            // 
+            // Descendente
+            // 
+            this.Descendente.AutoSize = true;
+            this.Descendente.Location = new System.Drawing.Point(7, 83);
+            this.Descendente.Name = "Descendente";
+            this.Descendente.Size = new System.Drawing.Size(136, 17);
+            this.Descendente.TabIndex = 4;
+            this.Descendente.TabStop = true;
+            this.Descendente.Text = "In-Orden: Descendente";
+            this.Descendente.UseVisualStyleBackColor = true;
+            this.Descendente.CheckedChanged += new System.EventHandler(this.Descendente_CheckedChanged);
             // 
             // postOrden
             // 
             this.postOrden.AutoSize = true;
-            this.postOrden.Location = new System.Drawing.Point(7, 117);
+            this.postOrden.Location = new System.Drawing.Point(7, 166);
             this.postOrden.Name = "postOrden";
             this.postOrden.Size = new System.Drawing.Size(78, 17);
             this.postOrden.TabIndex = 3;
             this.postOrden.TabStop = true;
             this.postOrden.Text = "Post-Orden";
             this.postOrden.UseVisualStyleBackColor = true;
+            this.postOrden.CheckedChanged += new System.EventHandler(this.postOrden_CheckedChanged);
             // 
             // preOrden
             // 
             this.preOrden.AutoSize = true;
-            this.preOrden.Location = new System.Drawing.Point(7, 79);
+            this.preOrden.Location = new System.Drawing.Point(7, 126);
             this.preOrden.Name = "preOrden";
             this.preOrden.Size = new System.Drawing.Size(73, 17);
             this.preOrden.TabIndex = 2;
             this.preOrden.TabStop = true;
             this.preOrden.Text = "Pre-Orden";
             this.preOrden.UseVisualStyleBackColor = true;
+            this.preOrden.CheckedChanged += new System.EventHandler(this.preOrden_CheckedChanged);
             // 
             // inOrden
             // 
             this.inOrden.AutoSize = true;
             this.inOrden.Location = new System.Drawing.Point(7, 38);
             this.inOrden.Name = "inOrden";
-            this.inOrden.Size = new System.Drawing.Size(66, 17);
+            this.inOrden.Size = new System.Drawing.Size(129, 17);
             this.inOrden.TabIndex = 1;
             this.inOrden.TabStop = true;
-            this.inOrden.Text = "In-Orden";
+            this.inOrden.Text = "In-Orden: Ascendente";
             this.inOrden.UseVisualStyleBackColor = true;
+            this.inOrden.CheckedChanged += new System.EventHandler(this.inOrdenA_CheckedChanged);
             // 
             // dgvTree
             // 
@@ -279,7 +296,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tView);
             this.Name = "frmArbol";
-            this.Text = "frmArbol";
+            this.Text = "Estructura de Datos - Arbol Binario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -316,5 +333,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
+        private System.Windows.Forms.RadioButton Descendente;
     }
 }

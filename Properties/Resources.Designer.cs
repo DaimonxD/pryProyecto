@@ -63,9 +63,29 @@ namespace pryProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _640px_Pila_svg {
+            get {
+                object obj = ResourceManager.GetObject("_640px_Pila_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cola {
             get {
                 object obj = ResourceManager.GetObject("cola", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_20150804_090436_e1441771548717 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20150804_090436_e1441771548717", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -242,7 +242,7 @@ namespace pryProyecto
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Name = "frmListaSimple";
-            this.Text = "Estructura de datos lineal: Lista Simple";
+            this.Text = "Estructura de Datos - Lista Simple";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

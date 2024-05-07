@@ -268,7 +268,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmListaDoble";
-            this.Text = "frmListaDoble";
+            this.Text = "Estructura de Datos - Lista Doble";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

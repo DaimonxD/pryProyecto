@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryProyecto
 {
@@ -64,7 +65,59 @@ namespace pryProyecto
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
+            arbol.Equilibrar();
+            arbol.Recorrer(dgvTree);
+            arbol.Recorrer(tView);
+            arbol.Recorrer(cboxT);
 
+            if(inOrden.Checked == true)
+            {
+                arbol.RecorrerAsc();
+            }
+            if(Descendente.Checked == true)
+            {
+                arbol.RecorrerDes();
+            }
+            if(preOrden.Checked == true)
+            {
+                arbol.RecorrerPreOrden();
+            }
+            if(postOrden.Checked == true)
+            {
+                arbol.RecorrerPostOrden();
+            }
+        }
+
+        private void inOrdenA_CheckedChanged(object sender, EventArgs e)
+        {
+            arbol.Recorrer(dgvTree);
+            arbol.Recorrer(cboxT);
+            arbol.Recorrer(tView);
+            arbol.RecorrerAsc();
+        }
+
+        private void Descendente_CheckedChanged(object sender, EventArgs e)
+        {
+            arbol.Recorrer(dgvTree);
+            arbol.Recorrer(cboxT);
+            arbol.Recorrer(tView);
+            arbol.RecorrerDes();
+        }
+
+        private void preOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            arbol.Recorrer(dgvTree);
+            arbol.Recorrer(cboxT);
+            arbol.Recorrer(tView);
+            arbol.RecorrerPreOrden();
+        }
+
+        private void postOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            arbol.Recorrer(dgvTree);
+            arbol.Recorrer(cboxT);
+            arbol.Recorrer(tView);
+            arbol.RecorrerPostOrden();
         }
     }
 }

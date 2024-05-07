@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,14 +61,11 @@ namespace pryProyecto
 
         private void inOrdenAsc(ComboBox lst, clsNodo r)
         {
-            if(r.Izquierdo != null)
-            {
-                inOrdenAsc(lst, r.Izquierdo);
-            }
-            lst.Items.Add(r.Codigo);
-            if(r.Derecho != null)
-            {
-                inOrdenAsc(lst, r.Derecho);
+            if (r != null)
+            {   
+                if (r.Izquierdo != null) inOrdenAsc(lst, r.Izquierdo);
+                lst.Items.Add(r.Codigo);
+                if(r.Derecho != null) inOrdenAsc(lst, r.Derecho);
             }
         }
 
@@ -79,9 +77,12 @@ namespace pryProyecto
 
         private void inOrdenAsc(DataGridView dgv, clsNodo r)
         {
-            if (r.Izquierdo != null) inOrdenAsc(dgv, r.Izquierdo);
-            dgv.Rows.Add(r.Codigo, r.Nombre, r.Tramite);
-            if (r.Derecho != null) inOrdenAsc(dgv, r.Derecho);
+            if(r != null)
+            {
+                if (r.Izquierdo != null) inOrdenAsc(dgv, r.Izquierdo);
+                dgv.Rows.Add(r.Codigo, r.Nombre, r.Tramite);
+                if (r.Derecho != null) inOrdenAsc(dgv, r.Derecho);
+            }
         }
 
         public void Recorrer(TreeView tree)
@@ -95,15 +96,18 @@ namespace pryProyecto
 
         private void PreOrden(clsNodo r, TreeNode nodo)
         {
-            TreeNode NodoPadre = new TreeNode(r.Codigo.ToString());
-            nodo.Nodes.Add(NodoPadre);
-            if(r.Izquierdo != null)
-            {
-                PreOrden(r.Izquierdo, NodoPadre);
-            }
-            if(r.Derecho != null)
-            {
-                PreOrden(r.Derecho, NodoPadre);
+            if (r != null)
+            {  
+                TreeNode NodoPadre = new TreeNode(r.Codigo.ToString());
+                nodo.Nodes.Add(NodoPadre);
+                if(r.Izquierdo != null)
+                {
+                    PreOrden(r.Izquierdo, NodoPadre);
+                }
+                if(r.Derecho != null)
+                {
+                    PreOrden(r.Derecho, NodoPadre);
+                }
             }
         }
 
@@ -132,15 +136,18 @@ namespace pryProyecto
 
         private void GrabarVectorInOrden(clsNodo NodoPadre)
         {
-            if(NodoPadre.Izquierdo != null)
+            if(Raiz != null)
             {
-                GrabarVectorInOrden(NodoPadre.Izquierdo);
-            }
-            Vector[i] = NodoPadre;
-            i = i + 1;
-            if(NodoPadre.Derecho != null)
-            {
-                GrabarVectorInOrden(NodoPadre.Derecho);
+                if(NodoPadre.Izquierdo != null)
+                {
+                    GrabarVectorInOrden(NodoPadre.Izquierdo);
+                }
+                Vector[i] = NodoPadre;
+                i = i + 1;
+                if(NodoPadre.Derecho != null)
+                {
+                    GrabarVectorInOrden(NodoPadre.Derecho);
+                }
             }
         }
 
@@ -177,6 +184,82 @@ namespace pryProyecto
             if(NodoPadre.Derecho != null)
             {
                 GrabarVectorInOrden(NodoPadre.Derecho, Codigo);
+            }
+        }
+
+        public void RecorrerAsc()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrdenAscendente.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de Espera\n");
+            AD.WriteLine("Código;Nombre;Trámite");
+            Ascendente(Raiz, AD);
+            AD.Close();
+        }
+
+        private void Ascendente(clsNodo Raiz, StreamWriter Writer)
+        {
+            if (Raiz != null)
+            {
+                Ascendente(Raiz.Izquierdo, Writer);
+                Writer.Write($"{Raiz.Codigo};{Raiz.Nombre};{Raiz.Tramite}\n");
+                Ascendente(Raiz.Derecho, Writer);
+            }
+        }
+
+        public void RecorrerDes()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrdenDescendente.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de Espera\n");
+            AD.WriteLine("Código;Nombre;Trámite");
+            Descendente(Raiz, AD);
+            AD.Close();
+        }
+
+        private void Descendente(clsNodo Raiz, StreamWriter Writer)
+        {
+            if (Raiz != null)
+            {
+                Descendente(Raiz.Derecho, Writer);
+                Writer.Write($"{Raiz.Codigo};{Raiz.Nombre};{Raiz.Tramite}\n");
+                Descendente(Raiz.Izquierdo, Writer);
+            }
+        }
+
+        public void RecorrerPreOrden()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPreOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de Espera\n");
+            AD.WriteLine("Código;Nombre;Trámite");
+            PreOrden(Raiz, AD);
+            AD.Close();
+        }
+
+        private void PreOrden(clsNodo Raiz, StreamWriter Writer)
+        {
+            if (Raiz != null)
+            {
+                Writer.Write($"{Raiz.Codigo};{Raiz.Nombre};{Raiz.Tramite}\n");
+                PreOrden(Raiz.Izquierdo, Writer);
+                PreOrden(Raiz.Derecho, Writer);
+            }
+        }
+
+        public void RecorrerPostOrden()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPostOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            PostOrden(Raiz, AD);
+            AD.Close();
+        }
+
+        private void PostOrden(clsNodo Raiz, StreamWriter Writer)
+        {
+            if (Raiz != null)
+            {
+                PostOrden(Raiz.Izquierdo, Writer);
+                PostOrden(Raiz.Derecho, Writer);
+                Writer.Write($"{Raiz.Codigo};{Raiz.Nombre};{Raiz.Tramite}\n");
             }
         }
     }

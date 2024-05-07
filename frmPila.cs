@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace pryProyecto
 {
-    public partial class frmCola : Form
+    public partial class frmPila : Form
     {
-        public frmCola()
+        public frmPila()
         {
             InitializeComponent();
         }
 
-        clsCola cola = new clsCola();
+        clsPila pila = new clsPila();
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -25,10 +25,10 @@ namespace pryProyecto
             obj.Codigo = Convert.ToInt32(txtC.Text);
             obj.Nombre = txtN.Text;
             obj.Tramite = txtT.Text;
-            cola.Agregar(obj);
-            cola.Recorrer(dgvCola);
-            cola.Recorrer(lstCola);
-            cola.Recorrer();
+            pila.Agregar(obj);
+            pila.Recorrer(dgvPila);
+            pila.Recorrer(lstPila);
+            pila.Recorrer();
             txtT.Text = "";
             txtN.Text = "";
             txtC.Text = "";
@@ -36,15 +36,15 @@ namespace pryProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (cola.Primero != null)
+            if (pila.Primero != null)
             {
-                lblC.Text = cola.Primero.Codigo.ToString();
-                lblN.Text = cola.Primero.Nombre;
-                lblT.Text = cola.Primero.Tramite;
-                cola.Eliminar();
-                cola.Recorrer(lstCola);
-                cola.Recorrer(dgvCola);
-                cola.Recorrer();
+                lblC.Text = pila.Primero.Codigo.ToString();
+                lblN.Text = pila.Primero.Nombre;
+                lblT.Text = pila.Primero.Tramite;
+                pila.Eliminar();
+                pila.Recorrer(lstPila);
+                pila.Recorrer(dgvPila);
+                pila.Recorrer();
             }
             else
             {
@@ -53,5 +53,7 @@ namespace pryProyecto
                 lblN.Text = "";
             }
         }
+
     }
+
 }
