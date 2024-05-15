@@ -49,12 +49,14 @@ namespace pryProyecto
 
         private void opreacionesConTablasDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Proximamente
+            frmBaseDatosOperaciones db1 = new frmBaseDatosOperaciones();
+            db1.ShowDialog();
         }
 
         private void consultasEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Proximamente
+            frmBaseDatosConsulta db2 = new frmBaseDatosConsulta();
+            db2.ShowDialog();
         }
 
         private void repasoDeOpreacionesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,6 +68,11 @@ namespace pryProyecto
         {
             frmDev dev = new frmDev();
             dev.ShowDialog();
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

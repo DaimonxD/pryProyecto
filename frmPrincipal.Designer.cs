@@ -41,7 +41,7 @@
             this.estructurasNoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionesConTablasDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasEnLaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.repasoDeOpreacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +57,7 @@
             this.baseDeDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1305, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,15 +73,16 @@
             // datosDelDevToolStripMenuItem
             // 
             this.datosDelDevToolStripMenuItem.Name = "datosDelDevToolStripMenuItem";
-            this.datosDelDevToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.datosDelDevToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datosDelDevToolStripMenuItem.Text = "Datos del Dev";
             this.datosDelDevToolStripMenuItem.Click += new System.EventHandler(this.datosDelDevToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
+            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
             // estructuraLinealesToolStripMenuItem
             // 
@@ -146,7 +147,7 @@
             // baseDeDatosToolStripMenuItem
             // 
             this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem,
+            this.operacionesConTablasDeBaseDeDatosToolStripMenuItem,
             this.consultasEnLaBaseDeDatosToolStripMenuItem,
             this.toolStripSeparator2,
             this.repasoDeOpreacionesToolStripMenuItem});
@@ -154,12 +155,12 @@
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.baseDeDatosToolStripMenuItem.Text = "Base de Datos";
             // 
-            // opreacionesConTablasDeBaseDeDatosToolStripMenuItem
+            // operacionesConTablasDeBaseDeDatosToolStripMenuItem
             // 
-            this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem.Name = "opreacionesConTablasDeBaseDeDatosToolStripMenuItem";
-            this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
-            this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem.Text = "Opreaciones con tablas de base de datos";
-            this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem_Click);
+            this.operacionesConTablasDeBaseDeDatosToolStripMenuItem.Name = "operacionesConTablasDeBaseDeDatosToolStripMenuItem";
+            this.operacionesConTablasDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.operacionesConTablasDeBaseDeDatosToolStripMenuItem.Text = "Opreaciones con tablas de base de datos";
+            this.operacionesConTablasDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.opreacionesConTablasDeBaseDeDatosToolStripMenuItem_Click);
             // 
             // consultasEnLaBaseDeDatosToolStripMenuItem
             // 
@@ -186,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryProyecto.Properties.Resources.IMG_20150804_090436_e1441771548717;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1305, 797);
+            this.ClientSize = new System.Drawing.Size(1284, 797);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
@@ -213,7 +214,7 @@
         private System.Windows.Forms.ToolStripMenuItem estructurasNoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arbolBinarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opreacionesConTablasDeBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionesConTablasDeBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasEnLaBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem repasoDeOpreacionesToolStripMenuItem;
