@@ -78,6 +78,7 @@
             this.btnSelect3.TabIndex = 2;
             this.btnSelect3.Text = "Juntar";
             this.btnSelect3.UseVisualStyleBackColor = true;
+            this.btnSelect3.Click += new System.EventHandler(this.btnSelect3_Click);
             // 
             // btnSelect2
             // 
@@ -87,6 +88,7 @@
             this.btnSelect2.TabIndex = 1;
             this.btnSelect2.Text = "Proyección multiatributo";
             this.btnSelect2.UseVisualStyleBackColor = true;
+            this.btnSelect2.Click += new System.EventHandler(this.btnSelect2_Click);
             // 
             // btnSelect1
             // 
@@ -96,6 +98,7 @@
             this.btnSelect1.TabIndex = 0;
             this.btnSelect1.Text = "Proyección Simple";
             this.btnSelect1.UseVisualStyleBackColor = true;
+            this.btnSelect1.Click += new System.EventHandler(this.btnSelect1_Click);
             // 
             // groupBox2
             // 
@@ -115,8 +118,9 @@
             this.btnWhere3.Name = "btnWhere3";
             this.btnWhere3.Size = new System.Drawing.Size(249, 23);
             this.btnWhere3.TabIndex = 5;
-            this.btnWhere3.Text = "Selección por convulción";
+            this.btnWhere3.Text = "Selección por convolución";
             this.btnWhere3.UseVisualStyleBackColor = true;
+            this.btnWhere3.Click += new System.EventHandler(this.btnWhere3_Click);
             // 
             // btnWhere2
             // 
@@ -126,6 +130,7 @@
             this.btnWhere2.TabIndex = 4;
             this.btnWhere2.Text = "Selección multiatributo";
             this.btnWhere2.UseVisualStyleBackColor = true;
+            this.btnWhere2.Click += new System.EventHandler(this.btnWhere2_Click);
             // 
             // btnWhere1
             // 
@@ -135,6 +140,7 @@
             this.btnWhere1.TabIndex = 3;
             this.btnWhere1.Text = "Selección Simple";
             this.btnWhere1.UseVisualStyleBackColor = true;
+            this.btnWhere1.Click += new System.EventHandler(this.btnWhere1_Click);
             // 
             // groupBox3
             // 
@@ -156,6 +162,7 @@
             this.btnAlgebra3.TabIndex = 8;
             this.btnAlgebra3.Text = "Diferencia";
             this.btnAlgebra3.UseVisualStyleBackColor = true;
+            this.btnAlgebra3.Click += new System.EventHandler(this.btnAlgebra3_Click);
             // 
             // btnAlgebra2
             // 
@@ -165,6 +172,7 @@
             this.btnAlgebra2.TabIndex = 7;
             this.btnAlgebra2.Text = "Intersección";
             this.btnAlgebra2.UseVisualStyleBackColor = true;
+            this.btnAlgebra2.Click += new System.EventHandler(this.btnAlgebra2_Click);
             // 
             // btnAlgebra1
             // 
@@ -174,6 +182,7 @@
             this.btnAlgebra1.TabIndex = 6;
             this.btnAlgebra1.Text = "Unión";
             this.btnAlgebra1.UseVisualStyleBackColor = true;
+            this.btnAlgebra1.Click += new System.EventHandler(this.btnAlgebra1_Click);
             // 
             // frmBaseDatosOperaciones
             // 

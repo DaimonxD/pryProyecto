@@ -73,14 +73,14 @@
             // datosDelDevToolStripMenuItem
             // 
             this.datosDelDevToolStripMenuItem.Name = "datosDelDevToolStripMenuItem";
-            this.datosDelDevToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datosDelDevToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.datosDelDevToolStripMenuItem.Text = "Datos del Dev";
             this.datosDelDevToolStripMenuItem.Click += new System.EventHandler(this.datosDelDevToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
@@ -187,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryProyecto.Properties.Resources.IMG_20150804_090436_e1441771548717;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1284, 797);
+            this.ClientSize = new System.Drawing.Size(1284, 749);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
