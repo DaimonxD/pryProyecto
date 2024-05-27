@@ -61,7 +61,8 @@ namespace pryProyecto
 
         private void repasoDeOpreacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Proximamente
+            frmOperaciones op = new frmOperaciones();
+            op.ShowDialog();
         }
 
         private void datosDelDevToolStripMenuItem_Click(object sender, EventArgs e)
