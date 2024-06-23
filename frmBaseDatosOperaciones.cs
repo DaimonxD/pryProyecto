@@ -40,7 +40,7 @@ namespace pryProyecto
         {
             varSQL = "select * " +
                 "from libro, idioma " +
-                "where libro.ididioma = idioma.ididioma" + 
+                "where libro.ididioma = idioma.ididioma " + 
                 "order by 1 desc";
             db.Listar(dgvOperaciones, varSQL);
         }
@@ -56,8 +56,9 @@ namespace pryProyecto
 
         private void btnWhere2_Click(object sender, EventArgs e) //Selección Multiatributo
         {
-            varSQL = "select  " +
-                "from ";
+            varSQL = "select * " +
+                "from libro " +
+                "where libro.ididioma = 3 AND libro.precio > 500 ";
             db.Listar(dgvOperaciones, varSQL);
         }
 
@@ -81,7 +82,10 @@ namespace pryProyecto
 
         private void btnAlgebra2_Click(object sender, EventArgs e) //Intersección
         {
-
+            varSQL = "SELECT * " +
+                "FROM Libro " +
+                "WHERE IdIdioma IN (SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma < 5)";
+            db.Listar(dgvOperaciones, varSQL);
         }
 
         private void btnAlgebra3_Click(object sender, EventArgs e) //Diferencia

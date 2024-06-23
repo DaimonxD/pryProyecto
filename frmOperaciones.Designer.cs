@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboxConsulta = new System.Windows.Forms.ComboBox();
             this.btnListar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblConsulta = new System.Windows.Forms.Label();
+            this.dgvConsulta = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,13 +45,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Operación a realizar en la base de datos:";
             // 
-            // comboBox1
+            // cboxConsulta
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(260, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(400, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboxConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxConsulta.FormattingEnabled = true;
+            this.cboxConsulta.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"});
+            this.cboxConsulta.Location = new System.Drawing.Point(260, 27);
+            this.cboxConsulta.Name = "cboxConsulta";
+            this.cboxConsulta.Size = new System.Drawing.Size(400, 21);
+            this.cboxConsulta.TabIndex = 1;
             // 
             // btnListar
             // 
@@ -61,23 +83,27 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "&Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // label2
+            // lblConsulta
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(32, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(781, 114);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.lblConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblConsulta.Location = new System.Drawing.Point(32, 60);
+            this.lblConsulta.Name = "lblConsulta";
+            this.lblConsulta.Size = new System.Drawing.Size(781, 114);
+            this.lblConsulta.TabIndex = 3;
+            this.lblConsulta.Text = "label2";
             // 
-            // dataGridView1
+            // dgvConsulta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(781, 261);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvConsulta.AllowUserToAddRows = false;
+            this.dgvConsulta.AllowUserToDeleteRows = false;
+            this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsulta.Location = new System.Drawing.Point(32, 185);
+            this.dgvConsulta.Name = "dgvConsulta";
+            this.dgvConsulta.ReadOnly = true;
+            this.dgvConsulta.Size = new System.Drawing.Size(781, 261);
+            this.dgvConsulta.TabIndex = 4;
             // 
             // frmOperaciones
             // 
@@ -85,15 +111,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(834, 458);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvConsulta);
+            this.Controls.Add(this.lblConsulta);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboxConsulta);
             this.Controls.Add(this.label1);
             this.Name = "frmOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Opreaciones de Base de Datos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,9 +128,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboxConsulta;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblConsulta;
+        private System.Windows.Forms.DataGridView dgvConsulta;
     }
 }
